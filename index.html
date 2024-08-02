@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Forum</title>
+    <!-- Icon,Flowbite  -->
+    <link rel="icon" href="./images/icon.webp" type="png/icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome,Tailwind  -->
+    <script
+      src="https://kit.fontawesome.com/7959247147.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="max-w-6xl mx-auto text-balance font-sans">
+    <!-- Header Section  -->
+    <header
+      class="px-4 md:px-12 lg:px-32 py-8 space-y-5 md:space-y-8 lg:space-y-12"
+    >
+      <!-- Nav Section  -->
+      <nav class="flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-[#12132D] text-2xl md:text-3xl lg:text-4xl font-black">
+          Retro Forum
+        </h1>
+        <div class="text-center space-y-2">
+          <!-- ToolTip Button 1  -->
+          <button
+            data-tooltip-target="tooltip-1"
+            type="button"
+            class="text-[#12132D99] bg-[#12132D08] border border-[#0307121A] font-medium rounded-full text-lg p-3 text-center inline-flex items-center me-2"
+          >
+            <i class="fa-solid fa-house"></i>
+          </button>
+          <!-- ToolTip Button 2 -->
+          <button
+            data-tooltip-target="tooltip-2"
+            type="button"
+            class="text-[#12132D99] bg-[#12132D08] border border-[#0307121A] font-medium rounded-full text-lg p-3 text-center inline-flex items-center me-2"
+          >
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <!-- ToolTip Button 3 -->
+          <button
+            data-tooltip-target="tooltip-3"
+            type="button"
+            class="text-[#12132D99] bg-[#12132D08] border border-[#0307121A] font-medium rounded-full text-lg p-3 text-center inline-flex items-center me-2"
+          >
+            <i class="fa-solid fa-user-plus"></i>
+          </button>
+          <!-- ToolTip Button 4 -->
+          <button
+            data-tooltip-target="tooltip-4"
+            type="button"
+            class="text-[#12132D99] bg-[#12132D08] border border-[#0307121A] font-medium rounded-full text-lg p-3 text-center inline-flex items-center me-2"
+          >
+            <i class="fa-solid fa-flag"></i>
+          </button>
+
+          <!-- ToolTip 1 -->
+          <div
+            id="tooltip-1"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip"
+          >
+            Home
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          <!-- ToolTip 2 -->
+          <div
+            id="tooltip-2"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip"
+          >
+            Edit
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          <!-- ToolTip 3 -->
+          <div
+            id="tooltip-3"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip"
+          >
+            Add
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          <!-- ToolTip 4 -->
+          <div
+            id="tooltip-4"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip"
+          >
+            Flag
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+
+          <!-- Sing in  -->
+          <button
+            type="button"
+            class="text-white bg-[#797DFC] font-bold rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2"
+          >
+            LogIn
+          </button>
+        </div>
+      </nav>
+      <!-- Banner Section  -->
+      <section
+        class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-bottom bg-[#12132D] rounded-[36px] flex flex-col lg:flex-row gap-10 justify-between items-center p-10 md:p-16 lg:p-20"
+      >
+        <div class="space-y-3 md:space-y-6 text-center lg:text-left lg:w-3/5">
+          <h1 class="text-white text-3xl lg:text-5xl font-black">
+            Welcome to the
+            <span class="text-[#797DFCA1]">Retro</span> Forum
+          </h1>
+          <p class="text-[#FFFFFFCC] font-medium text-xl">
+            Share your favorite opinion and win and wp forum coffee mug!
+          </p>
+          <div class="relative">
+            <input
+              type="search"
+              id="userInput"
+              class="block w-full p-4 ps-5 md:ps-10 text-sm text-[#797DFC] border border-gray-300 rounded-full bg-gray-50 focus:border-[#797DFC] placeholder-[#03071280]"
+              placeholder="Search here anything"
+            />
+
+            <button
+              id="search"
+              type="button"
+              class="text-white absolute -end-0.5 -bottom-0.5 bg-[#797DFC] font-bold rounded-full text-sm px-5 md:px-7 py-2.5 text-center me-2 mb-2"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <div>
+          <ul
+            class="bg-white p-10 md:p-12 rounded-[32px] text-[#12132DCC] text-2xl font-medium space-y-3 whitespace-nowrap"
+          >
+            <li class="flex justify-between items-center gap-12">
+              Registered Users <span>01</span>
+            </li>
+            <li class="flex justify-between items-center gap-12">
+              Forum <span>05</span>
+            </li>
+            <li class="flex justify-between items-center gap-12">
+              Topics <span>01</span>
+            </li>
+            <li class="flex justify-between items-center gap-12">
+              Replies <span>01</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <!-- Main Section  -->
+    <main
+      class="px-4 md:px-12 lg:px-32 py-8 space-y-5 md:space-y-8 lg:space-y-12"
+    >
+      <!-- Let's Discuss Section  -->
+      <section class="space-y-4 lg:space-y-6">
+        <h1 class="text-[#12132D] text-4xl font-black text-center">
+          Let’s Discuss
+        </h1>
+        <p class="text-center text-[#12132D99] text-lg max-w-[691px] mx-auto">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <div class="flex flex-col-reverse lg:flex-row gap-6 justify-between">
+          <!-- Post Posted-->
+          <div id="posts" class="flex-1"></div>
+          <!-- Post Marked -->
+          <div
+            id="markedPost"
+            class="p-6 bg-[#12132D0D] rounded-3xl space-y-4 lg:w-[374px] max-h-[465px] overflow-auto"
+          >
+            <ul class="flex justify-between">
+              <li class="text-[#12132D] text-xl font-bold">Title</li>
+              <li class="text-[#12132D99] text-base">
+                <i id="markChecked" class="fa-solid fa-check-double"></i>
+                Mark as read (<span id="markedCount">0</span>)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Join Our Forum Section  -->
+      <section
+        class="bg-[#12132D] flex flex-col md:flex-row justify-between items-center gap-5 rounded-[32px] p-5 md:p-10 lg:p-16 text-center md:text-left"
+      >
+        <!-- Forum Content  -->
+        <div class="space-y-6">
+          <h1 class="text-3xl lg:text-4xl text-white font-black">
+            Join Our Forum
+          </h1>
+          <p class="text-lg text-[#FFFFFFCC]">
+            Share your favorite opinion and win and wp forum coffee mug! Yes,
+            you can run unit tests and view the results directly within the app.
+          </p>
+          <button
+            type="button"
+            class="text-white bg-[#797DFC] font-bold rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2"
+          >
+            Registered Now
+          </button>
+        </div>
+        <!-- Image Content  -->
+        <div>
+          <img
+            class="object-cover max-w-full"
+            src="./images/joinforum.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- Latest Post Section  -->
+      <section class="space-y-4 lg:space-y-6">
+        <h1 class="text-[#12132D] text-4xl font-black text-center">
+          Latest Posts
+        </h1>
+        <p class="text-center text-[#12132D99] text-lg max-w-[691px] mx-auto">
+          Discover a dynamic array of current insights and updates, providing a
+          constant stream of engaging content to keep you informed and inspired.
+        </p>
+        <div id="latestSpinner"></div>
+        <!-- Latest Posts  -->
+        <div
+          id="latestPost"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:last:*:col-span-2 lg:last:*:col-auto"
+        ></div>
+      </section>
+    </main>
+    <!-- Footer Section  -->
+    <footer
+      class="px-4 md:px-12 lg:px-32 py-8 space-y-5 bg-[#12132D0D] text-center"
+    >
+      <h1 class="text-3xl md:text-4xl text-[#12132D] font-black">
+        Retro Forum
+      </h1>
+      <p class="text-[#12132DB2]">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC.
+      </p>
+      <ul class="text-[#12132D] text-lg flex gap-6 justify-center">
+        <li><i class="fa-brands fa-x-twitter"></i></li>
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+        <li><i class="fa-brands fa-github"></i></li>
+      </ul>
+      <hr />
+      <p class="text-[#12132D80] font-light">
+        Copyright © 2024 - All rights reserved
+      </p>
+    </footer>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
